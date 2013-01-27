@@ -1,9 +1,9 @@
 <?php
 /**
  *
- * ThinkUp/webapp/index.php
+ * ThinkUp/webapp/_lib/model/exceptions/class.RequiredArgumentMissingEception.php
  *
- * Copyright (c) 2009-2013 Gina Trapani
+ * Copyright (c) 2009-2013 Sam Rose
  *
  * LICENSE:
  *
@@ -21,11 +21,9 @@
  * <http://www.gnu.org/licenses/>.
  *
  *
- * @author Gina Trapani <ginatrapani[at]gmail[dot]com>
+ *
+ * @author Sam Rose <samwho@lbak.co.uk>
  * @license http://www.gnu.org/licenses/gpl.html
- * @copyright 2009-2013 Gina Trapani
+ * @copyright 2009-2013 Sam Rose
  */
-require_once 'init.php';
-
-$controller = new InsightStreamController();
-echo $controller->go();
+class RequiredArgumentMissingException extends Exception {}

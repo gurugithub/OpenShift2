@@ -1,9 +1,9 @@
 <?php
 /**
  *
- * ThinkUp/webapp/index.php
+ * ThinkUp/webapp/_lib/model/exceptions/APIOAuthException.php
  *
- * Copyright (c) 2009-2013 Gina Trapani
+ * Copyright (c) 2012-2013 Gina Trapani
  *
  * LICENSE:
  *
@@ -21,11 +21,8 @@
  * <http://www.gnu.org/licenses/>.
  *
  *
- * @author Gina Trapani <ginatrapani[at]gmail[dot]com>
+ * @author Gina Trapani <ginatrapani at gmail dot com>
  * @license http://www.gnu.org/licenses/gpl.html
- * @copyright 2009-2013 Gina Trapani
+ * @copyright 2012-2013 Gina Trapani
  */
-require_once 'init.php';
-
-$controller = new InsightStreamController();
-echo $controller->go();
+class APIOAuthException extends Exception { }

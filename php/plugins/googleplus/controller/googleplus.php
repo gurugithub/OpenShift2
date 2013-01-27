@@ -1,9 +1,19 @@
 <?php
+/*
+ Plugin Name: Google+
+ Plugin URI: http://github.com/ginatrapani/thinkup/tree/master/webapp/plugins/googleplus/
+ Description: Capture and display Google+ posts.
+ Class: GooglePlusPlugin
+ Version: 0.01
+ Icon: assets/img/plugin_icon.png
+ Author: Gina Trapani
+ */
+
 /**
  *
- * ThinkUp/webapp/index.php
+ * ThinkUp/webapp/plugins/googleplus/controller/googleplus.php
  *
- * Copyright (c) 2009-2013 Gina Trapani
+ * Copyright (c) 2011-2013 Gina Trapani
  *
  * LICENSE:
  *
@@ -20,12 +30,13 @@
  * You should have received a copy of the GNU General Public License along with ThinkUp.  If not, see
  * <http://www.gnu.org/licenses/>.
  *
- *
  * @author Gina Trapani <ginatrapani[at]gmail[dot]com>
  * @license http://www.gnu.org/licenses/gpl.html
- * @copyright 2009-2013 Gina Trapani
+ * @copyright 2011-2013 Gina Trapani
  */
-require_once 'init.php';
 
-$controller = new InsightStreamController();
-echo $controller->go();
+$webapp_plugin_registrar = PluginRegistrarWebapp::getInstance();
+$webapp_plugin_registrar->registerPlugin('google+', 'GooglePlusPlugin');
+
+$crawler_plugin_registrar = PluginRegistrarCrawler::getInstance();
+$crawler_plugin_registrar->registerCrawlerPlugin('GooglePlusPlugin');

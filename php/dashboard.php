@@ -1,7 +1,7 @@
 <?php
 /**
  *
- * ThinkUp/webapp/index.php
+ * ThinkUp/webapp/dashboard.php
  *
  * Copyright (c) 2009-2013 Gina Trapani
  *
@@ -27,5 +27,5 @@
  */
 require_once 'init.php';
 
-$controller = new InsightStreamController();
+$controller = new DashboardController();
 echo $controller->go();

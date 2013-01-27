@@ -1,9 +1,9 @@
 <?php
 /**
  *
- * ThinkUp/webapp/index.php
+ * ThinkUp/webapp/install/version.php
  *
- * Copyright (c) 2009-2013 Gina Trapani
+ * Copyright (c) 2009-2013 Dwi Widiastuti, Gina Trapani
  *
  * LICENSE:
  *
@@ -21,11 +21,11 @@
  * <http://www.gnu.org/licenses/>.
  *
  *
+ * @author Dwi Widiastuti <admin[at]diazuwi[dot]web[dot]id>
  * @author Gina Trapani <ginatrapani[at]gmail[dot]com>
  * @license http://www.gnu.org/licenses/gpl.html
- * @copyright 2009-2013 Gina Trapani
+ * @copyright 2009-2013 Dwi Widiastuti, Gina Trapani, Guillaume Boudreau
  */
-require_once 'init.php';
-
-$controller = new InsightStreamController();
-echo $controller->go();
+$THINKUP_VERSION = '2.0-beta.2';
+$THINKUP_VERSION_REQUIRED['php'] = '5.2';
+$THINKUP_VERSION_REQUIRED['mysql'] = '5';

@@ -1,9 +1,9 @@
 <?php
 /**
  *
- * ThinkUp/webapp/index.php
+ * ThinkUp/webapp/_lib/model/interface.InsightPlugin.php
  *
- * Copyright (c) 2009-2013 Gina Trapani
+ * Copyright (c) 2012-2013 Gina Trapani
  *
  * LICENSE:
  *
@@ -21,11 +21,21 @@
  * <http://www.gnu.org/licenses/>.
  *
  *
- * @author Gina Trapani <ginatrapani[at]gmail[dot]com>
+ * Insight plugin interface
+ *
  * @license http://www.gnu.org/licenses/gpl.html
- * @copyright 2009-2013 Gina Trapani
+ * @copyright 2012-2013 Gina Trapani
+ * @author Gina Trapani <ginatrapani[at]gmail[dot]com>
+ *
  */
-require_once 'init.php';
+interface InsightPlugin extends GenericPlugin {
+    /**
+     * Generate insight.
+     * @param Instance $instance
+     * @param arr Post objects from the last week
+     * @param int $number_days Days to backfill insights
+     * @return void
+     */
+    public function generateInsight(Instance $instance, $last_week_of_posts, $number_days);
+}
 
-$controller = new InsightStreamController();
-echo $controller->go();

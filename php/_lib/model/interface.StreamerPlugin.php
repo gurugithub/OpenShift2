@@ -1,9 +1,9 @@
 <?php
 /**
  *
- * ThinkUp/webapp/index.php
+ * ThinkUp/webapp/_lib/model/interface.StreamerPlugin.php
  *
- * Copyright (c) 2009-2013 Gina Trapani
+ * Copyright (c) 2011-2013 Amy Unruh
  *
  * LICENSE:
  *
@@ -20,12 +20,29 @@
  * You should have received a copy of the GNU General Public License along with ThinkUp.  If not, see
  * <http://www.gnu.org/licenses/>.
  *
+ * Streamer Plugin interface
  *
- * @author Gina Trapani <ginatrapani[at]gmail[dot]com>
  * @license http://www.gnu.org/licenses/gpl.html
- * @copyright 2009-2013 Gina Trapani
+ * @copyright 2011-2013 Amy Unruh
+ * @author Amy Unruh
  */
-require_once 'init.php';
-
-$controller = new InsightStreamController();
-echo $controller->go();
+interface StreamerPlugin extends GenericPlugin {
+    /**
+     * Start up all streams managed by the plugin.
+     * @abstract
+     * @return void
+     */
+    public function stream();
+    /**
+     * Process the streaming data.
+     * @abstract
+     * @return void
+     */
+    public function streamProcess();
+    /**
+     * Shutdown all running streams.
+     * @abstract
+     * @return void
+     */
+    public function shutdownStreams();
+}

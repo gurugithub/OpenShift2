@@ -1,9 +1,9 @@
 <?php
 /**
  *
- * ThinkUp/webapp/index.php
+ * ThinkUp/webapp/install/upgrade-database.php
  *
- * Copyright (c) 2009-2013 Gina Trapani
+ * Copyright (c) 2009-2013 Mark Wilkie
  *
  * LICENSE:
  *
@@ -21,11 +21,12 @@
  * <http://www.gnu.org/licenses/>.
  *
  *
- * @author Gina Trapani <ginatrapani[at]gmail[dot]com>
  * @license http://www.gnu.org/licenses/gpl.html
- * @copyright 2009-2013 Gina Trapani
+ * @copyright 2009-2013 Mark Wilkie
+ * @author Mark Wilkie <mwilkie[at]gmail[dot]com>
+ *
  */
+chdir("..");
 require_once 'init.php';
-
-$controller = new InsightStreamController();
+$controller = new UpgradeDatabaseController();
 echo $controller->go();

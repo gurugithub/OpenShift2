@@ -1,7 +1,7 @@
 <?php
 /**
  *
- * ThinkUp/webapp/index.php
+ * ThinkUp/webapp/install/index.php
  *
  * Copyright (c) 2009-2013 Gina Trapani
  *
@@ -23,9 +23,10 @@
  *
  * @author Gina Trapani <ginatrapani[at]gmail[dot]com>
  * @license http://www.gnu.org/licenses/gpl.html
- * @copyright 2009-2013 Gina Trapani
+ * @copyright 2009-2013 Gina Trapani, Dwi Widiastuti
  */
+chdir("..");
 require_once 'init.php';
 
-$controller = new InsightStreamController();
+$controller = new InstallerController();
 echo $controller->go();
